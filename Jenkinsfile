@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                // Di sini URL sudah dipastikan mengarah ke repositori asli Anda
-                git 'https://github.com/dfansyahjuan/PRAKTIKUM-TUGAS-8.git'
+                // Menggunakan fungsi otomatis bawaan Jenkins untuk menarik kode dari SCM
+                checkout scm
             }
         }
         stage('Install Dependencies') {
